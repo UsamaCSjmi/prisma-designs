@@ -1,0 +1,32 @@
+<?php
+
+// localhost
+define('SERVER_PATH',$_SERVER['DOCUMENT_ROOT'].'/development/prisma-designs');
+define('SITE_PATH','http://localhost/development/prisma-designs');
+define("DB_HOST", "localhost");
+define("DB_USER", "root");
+define("DB_PASS", "");
+define("DB_NAME", "prismadesigns");
+
+
+// Hostinger - Sever
+// define('SERVER_PATH',$_SERVER['DOCUMENT_ROOT']);
+// define('SITE_PATH','http://development.prismadesigns.in');
+// define("DB_HOST", "localhost");
+// define("DB_USER", "u936121314_ac");
+// define("DB_PASS", "SIO4gOx*5");
+// define("DB_NAME", "u936121314_ac");
+
+
+define('IMAGE_SERVER_PATH',SERVER_PATH.'/images/');
+define('IMAGE_SITE_PATH',SITE_PATH.'/images/');
+
+define('PRODUCT_IMAGE_SERVER_PATH',SERVER_PATH.'/images/product/');
+define('PRODUCT_IMAGE_SITE_PATH',SITE_PATH.'/images/product/');
+
+define('PRODUCT_MULTIPLE_IMAGE_SERVER_PATH',SERVER_PATH.'/images/product_images/');
+define('PRODUCT_MULTIPLE_IMAGE_SITE_PATH',SITE_PATH.'/images/product_images/');
+
+define('BANNER_IMAGE_SERVER_PATH',SERVER_PATH.'/images/banner/');
+define('BANNER_IMAGE_SITE_PATH',SITE_PATH.'/images/banner/');
+
