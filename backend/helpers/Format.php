@@ -26,6 +26,14 @@ class Format
         return $data;
     }
 
+    public function slugify($str)
+    {
+        $slug = strtolower($str);
+        $slug = str_replace(" ","-",$slug);
+        return $slug;
+    }
+
+
     public function title()
     {
         $path  = $_SERVER['SCRIPT_FILENAME'];
@@ -37,5 +45,57 @@ class Format
             $title = 'contact';
         }
         return $title = ucfirst($title);
+    }
+
+    public static function getRouter(){
+        $request = $_SERVER['REQUEST_URI'];
+        $router = str_replace(BASE_PATH,'',$request);
+        $router = explode('/',$router);
+        return $router;
+    }
+    public static function getCategoryFromURL(){
+        $router = Format::getRouter();
+        if(sizeof($router)==1 && $router[0] == ""){
+            return "home";
+        }
+        elseif(sizeof($router)==1 && $router[0] == "contact"){
+            return "contact";
+        }
+        elseif(sizeof($router)==1 && $router[0] == "about"){
+            return "about";
+        }
+        elseif(sizeof($router)==1 && $router[0] == "services"){
+            return "services";
+        }
+        elseif(sizeof($router)==1 && $router[0] == "error"){
+            return "error";
+        }
+        elseif(sizeof($router)<=3 && sizeof($router)>0){
+            return $router[0];
+        }
+        else{
+            return false;
+        }
+    }
+
+
+
+    public static function getSubCategoryFromURL(){
+        $router = Format::getRouter();
+        if(sizeof($router)<=3 && sizeof($router)>1){
+            return $router[1];
+        }
+        else{
+            return false;
+        }
+    }
+    public static function getProfileFromURL(){
+        $router = Format::getRouter();
+        if(sizeof($router)==3){
+            return $router[2];
+        }
+        else{
+            return false;
+        }
     }
 }

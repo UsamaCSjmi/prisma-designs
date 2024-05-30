@@ -14,13 +14,12 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Links</h2>
+              <h2 class="ftco-heading-2">Quick Links</h2>
               <ul class="list-unstyled">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <!-- <li><a href="#">Projects</a></li> -->
-                <li><a href="#">Contact</a></li>
+                <li><a href="<?php echo SITE_PATH?>">Home</a></li>
+                <li><a href="<?php echo SITE_PATH?>/about">About</a></li>
+                <li><a href="<?php echo SITE_PATH?>/services">Services</a></li>
+                <li><a href="<?php echo SITE_PATH?>/contact">Contact</a></li>
               </ul>
             </div>
           </div>
@@ -32,7 +31,7 @@
                 $categories = $categoryObj->getAllCat();
                 while($category = mysqli_fetch_array($categories)){
                   ?>
-                <li><a href="category.php?id=<?php echo $category['id']?>"><?php echo $category['categories']?></a></li>
+                <li><a href="<?php echo SITE_PATH."/".$category['slug']?>"><?php echo $category['categories']?></a></li>
                 <?php } ?>
               </ul>
             </div>
@@ -67,23 +66,23 @@
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/jquery.min.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/popper.min.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/bootstrap.min.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/jquery.easing.1.3.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/jquery.waypoints.min.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/jquery.stellar.min.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/owl.carousel.min.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/jquery.magnific-popup.min.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/aos.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/jquery.animateNumber.min.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/bootstrap-datepicker.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/jquery.timepicker.min.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/scrollax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/google-map.js"></script>
+  <script src="<?php echo SITE_PATH?>/js/main.js"></script>
     
   </body>
 </html>

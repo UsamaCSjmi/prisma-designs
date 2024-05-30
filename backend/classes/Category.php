@@ -30,6 +30,18 @@ class Category
         return $result['categories'];
     }
 
+    public function getCategoryBySlug($slug)
+    {
+        $query = "SELECT * FROM categories WHERE slug='$slug'";
+        $result = $this->db->select($query);
+        if($result){
+            return mysqli_fetch_array($result);
+        }
+        else{
+            return false;
+        }
+    }
+
     public function getCatWithImage()
     {
         $query = "SELECT categories.categories,product.image FROM categories,product WHERE categories.id = product.categories_id GROUP BY categories.id";

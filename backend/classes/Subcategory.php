@@ -34,4 +34,16 @@ class Subcategory
         $result = mysqli_fetch_array($result);
         return $result['sub_categories'];
     }
+
+    public function getSubcatBySlugAndCatId($slug,$catId)
+    {
+        $query = "SELECT * FROM sub_categories WHERE slug='$slug' AND categories_id=$catId AND status=1";
+        $result = $this->db->select($query);
+        if($result){
+            return mysqli_fetch_array($result);
+        }
+        else{
+            return false;
+        }
+    }
 }

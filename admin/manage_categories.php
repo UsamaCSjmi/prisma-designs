@@ -11,7 +11,12 @@ if(isset($_GET['id']) && $_GET['id']!=''){
         $categories=$row['categories'];
     }
     else{
-        header('Location:categories.php');
+        echo '
+            <script>
+            window.location.href = "categories.php";
+            </script>
+        ';
+        // header('Location:categories.php');
         die();
     }
 }
@@ -42,7 +47,12 @@ if(isset($_POST['submit'])){
         else{
             mysqli_query($conn,"insert into categories (categories,status) values('$categories','1')");
         }
-        header('Location:categories.php');
+        echo '
+            <script>
+            window.location.href = "categories.php";
+            </script>
+        ';
+        // header('Location:categories.php');
         die();
     }
     

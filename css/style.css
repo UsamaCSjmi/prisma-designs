@@ -8724,4 +8724,12 @@ textarea.form-control {
     }
     .category-modal .modal-content{
       background: none;
+      border: none;
+      border-radius: 0;
+    }
+    .dropdown-menu{
+      background: #00000078!important;
+    }
+    .dropdown-item{
+      color: #ffffff!important;
     }

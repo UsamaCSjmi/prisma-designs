@@ -1,63 +1,64 @@
 <?php
-include_once('./backend/config/config.php');
-include_once('./backend/classes/Category.php');
-include_once('./backend/classes/Subcategory.php');
-$categoryObj = new Category();
-$subcatObj = new Subcategory();
 $categories = $categoryObj->getAllCat();
 ?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Prisma Designs</title>
+    <title><?php echo $title;?></title>
+    <meta name="description" content="<?php echo $description;?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/animate.css">
     
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/magnific-popup.css">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/aos.css">
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/ionicons.min.css">
 
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/bootstrap-datepicker.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/jquery.timepicker.css">
 
     
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/flaticon.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/icomoon.css">
+    <link rel="stylesheet" href="<?php echo SITE_PATH?>/css/style.css">
   </head>
   <body>
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="index.php">Prisma Designs</a>
+	      <a class="navbar-brand" href="<?php echo SITE_PATH?>">Prisma Designs</a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	        	<li class="nav-item active"><a href="index.php" class="nav-link">Home</a></li>
-	        	<li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
-            <?php
-            while($category = mysqli_fetch_array($categories)){
-              ?>
-	        	<li class="nav-item"><a href="category.php" class="nav-link"><?php echo $category['categories']?></a></li>
+	        	<li class="nav-item active"><a href="<?php echo SITE_PATH?>" class="nav-link">Home</a></li>
+	        	<li class="nav-item"><a href="<?php echo SITE_PATH?>/about" class="nav-link">About</a></li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Products</a>
+              <div class="dropdown-menu">
               <?php
-            }
-            ?>
-            <li class="nav-item"><a href="services.php" class="nav-link">Services</a></li>
-	        	<!-- <li class="nav-item"><a href="blog.php" class="nav-link">Blog</a></li> -->
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
+                while($category = mysqli_fetch_array($categories)){
+              ?>
+                <a class="dropdown-item" href="<?php echo SITE_PATH."/".$category['slug']?>"><?php echo $category['categories']?></a>
+                <?php
+                }
+                ?>
+              </div>
+            </li>
+            <li class="nav-item"><a href="<?php echo SITE_PATH?>/services" class="nav-link">Services</a></li>
+	          <li class="nav-item"><a href="<?php echo SITE_PATH?>/contact" class="nav-link">Contact</a></li>
 	        </ul>
 	      </div>
 	    </div>

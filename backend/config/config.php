@@ -7,6 +7,7 @@ define("DB_HOST", "localhost");
 define("DB_USER", "root");
 define("DB_PASS", "");
 define("DB_NAME", "prismadesigns");
+define('BASE_PATH','/development/prisma-designs/');
 
 
 // Hostinger - Sever
@@ -16,6 +17,7 @@ define("DB_NAME", "prismadesigns");
 // define("DB_USER", "u936121314_ac");
 // define("DB_PASS", "SIO4gOx*5");
 // define("DB_NAME", "u936121314_ac");
+// define('BASE_PATH','');
 
 
 define('IMAGE_SERVER_PATH',SERVER_PATH.'/images/');

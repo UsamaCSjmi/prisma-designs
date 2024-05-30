@@ -1,7 +1,6 @@
 <?php
 $filepath = realpath(dirname(__FILE__));
 include_once($filepath.'/../lib/Database.php');
-include_once('Customer.php');
 include_once($filepath.'/../helpers/Format.php');
  ?>
 <?php 
@@ -17,67 +16,52 @@ class Product
         $this->fm = new Format();
     }
 
-   
     public function getAllProduct()
     {
-        if(Customer::checkLogin()){
-            $query = "select * from product order by id desc";
+        $query = "select * from product order by id desc";
+        $result = $this->db->select($query);
+        if($result){
+            return $result;
         }
         else{
-            $query = "select * from product where is_protected = 0 order by id desc";
+            return false;
         }
-        $result = $this->db->select($query);
-        return $result;
     }
 
     public function getProByCatId($catid)
     {
-        if(Customer::checkLogin()){
-            $query = "select * from product where categories_id=$catid";
+        $query = "select * from product where categories_id=$catid AND status=1 ";
+        $result = $this->db->select($query);
+        if($result){
+            return $result;
         }
         else{
-            $query = "select * from product where categories_id=$catid and is_protected=0;";
+            return false;
         }
-        $result = $this->db->select($query);
-        return $result;
     }
 
     public function getProBySubCatId($subcatid)
     {
-        if(Customer::checkLogin()){
-            $query = "select * from product where sub_categories_id=$subcatid";
+        $query = "select * from product where sub_categories_id=$subcatid AND status=1";
+        $result = $this->db->select($query);
+        if($result){
+            return $result;
         }
         else{
-            $query = "select * from product where sub_categories_id=$subcatid and is_protected = 0";
+            return false;
         }
-        $result = $this->db->select($query);
-        return $result;
-    }
-
-    public function getProImgByCatId($cat)
-    {
-        $query = "SELECT image FROM product WHERE categories_id = '$cat' LIMIT 1";
-        $result = $this->db->select($query);
-        return $result;
-    }
-
-    public function getProImgBySubCatId($subcat)
-    {
-        $query = "SELECT image FROM product WHERE sub_categories_id = '$subcat' LIMIT 1";
-        $result = $this->db->select($query);
-        return $result;
     }
 
     public function getNewProducts($x)
     {
-        if(Customer::checkLogin()){
-            $query = "SELECT * FROM product ORDER BY Id ASC LIMIT $x";
+        $query = "SELECT * FROM product WHERE status=1 ORDER BY Id ASC LIMIT $x";
+        $result = $this->db->select($query);
+        if($result){
+            return $result;
         }
         else{
-            $query = "SELECT * FROM product where is_protected = 0 ORDER BY Id ASC LIMIT $x";
+            return false;
         }
-        $result = $this->db->select($query);
-        return $result;
     }
 
 }
