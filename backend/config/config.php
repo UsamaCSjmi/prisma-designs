@@ -17,7 +17,7 @@ define("DB_HOST", "localhost");
 define("DB_USER", "u936121314_prisma");
 define("DB_PASS", "Z#3m?eVY1@");
 define("DB_NAME", "u936121314_prisma");
-define('BASE_PATH','');
+define('BASE_PATH','/');
 
 
 define('IMAGE_SERVER_PATH',SERVER_PATH.'/images/');
