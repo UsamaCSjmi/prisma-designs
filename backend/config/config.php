@@ -1,23 +1,23 @@
 <?php
 
 // localhost
-define('SERVER_PATH',$_SERVER['DOCUMENT_ROOT'].'/development/prisma-designs');
-define('SITE_PATH','http://localhost/development/prisma-designs');
-define("DB_HOST", "localhost");
-define("DB_USER", "root");
-define("DB_PASS", "");
-define("DB_NAME", "prismadesigns");
-define('BASE_PATH','/development/prisma-designs/');
+// define('SERVER_PATH',$_SERVER['DOCUMENT_ROOT'].'/development/prisma-designs');
+// define('SITE_PATH','http://localhost/development/prisma-designs');
+// define("DB_HOST", "localhost");
+// define("DB_USER", "root");
+// define("DB_PASS", "");
+// define("DB_NAME", "prismadesigns");
+// define('BASE_PATH','/development/prisma-designs/');
 
 
 // Hostinger - Sever
-// define('SERVER_PATH',$_SERVER['DOCUMENT_ROOT']);
-// define('SITE_PATH','http://development.prismadesigns.in');
-// define("DB_HOST", "localhost");
-// define("DB_USER", "u936121314_ac");
-// define("DB_PASS", "SIO4gOx*5");
-// define("DB_NAME", "u936121314_ac");
-// define('BASE_PATH','');
+define('SERVER_PATH',$_SERVER['DOCUMENT_ROOT']);
+define('SITE_PATH','https://prismadesigns.in');
+define("DB_HOST", "localhost");
+define("DB_USER", "u936121314_prisma");
+define("DB_PASS", "Z#3m?eVY1@");
+define("DB_NAME", "u936121314_prisma");
+define('BASE_PATH','');
 
 
 define('IMAGE_SERVER_PATH',SERVER_PATH.'/images/');
