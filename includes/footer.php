@@ -42,8 +42,9 @@
             	<div class="block-23 mb-3">
 	              <ul>
 	                <li><span class="icon icon-map-marker"></span><span class="text">Deputy Ganj, Moradabad, Uttar Pradesh, India - 244001</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+91 xxxxx xxxxx</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@prismadesigns.in</span></a></li>
+	                <li class="mb-0"><a href="tel:+919634412128"><span class="icon icon-phone"></span><span class="text">+91 96344 12128</span></a></li>
+	                <li><a href="tel:+919808513181"><span class="icon icon-phone"></span><span class="text">+91 98085 13181</span></a></li>
+	                <li><a href="mailto:prisma.saim@gmail.com"><span class="icon icon-envelope"></span><span class="text">prisma.saim@gmail.com</span></a></li>
 	              </ul>
 	            </div>
             </div>

@@ -1,6 +1,8 @@
 <?php
 require 'top.inc.php';
 $categories='';
+$image_required='';
+// $image_required='required';
 $msg='';
 $sub_categories='';
 if(isset($_GET['id']) && $_GET['id']!=''){
@@ -11,6 +13,8 @@ if(isset($_GET['id']) && $_GET['id']!=''){
         $row=mysqli_fetch_assoc($res);
         $sub_categories=$row['sub_categories'];
         $categories=$row['categories_id'];
+        $image = $row['image'];
+        $image_required='';
     }
     else{
         echo '
@@ -93,6 +97,24 @@ if(isset($_POST['submit'])){
                                 <label for="sub_categories" class=" form-control-label">Sub Category</label>
                                 <input type="text" name="sub_categories" placeholder="Enter Sub Category" class="form-control" required value="<?php echo $sub_categories?>">
                             </div>
+                            <div class="form-group">
+                                <div class="row" id="image_box">
+                                    <div class="col-lg-6">
+                                        <label for="image" class=" form-control-label">Image</label>
+                                        <input type="file" name="image" class="form-control" <?php echo $image_required?> >
+                                    </div>
+                                    <?php 
+                                        if($image!=''){
+                                            echo '<div class="col-lg-3">
+                                                    <a target="_blank" href="'.IMAGE_SITE_PATH.'categories/'.$image.'">
+                                                        <img src="'.IMAGE_SITE_PATH.'categories/'.$image.'" alt="">
+                                                    </a>
+                                                  </div>';
+                                        }
+                                        ?>
+                                    
+                                </div>
+                            </div>  
                             <button name="submit" type="submit" class="btn btn-lg btn-info btn-block">
                                 <span id="payment-button-amount" >Submit</span>
                             </button>

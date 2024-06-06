@@ -6,12 +6,12 @@ if(isset($pageSubcategory)){
 }
 ?>
 <section class="home-slider js-fullheight owl-carousel">
-	<div class="slider-item js-fullheight" style="background-image:url(<?php echo SITE_PATH ?>/images/categories/<?php
+	<div class="slider-item js-fullheight" style="background-image:url(<?php echo SITE_PATH ?>/images/<?php
 	 if($isSubcategory==true){
-		echo $pageSubcategory['image'] ;
+		echo "sub-categories/".$pageSubcategory['image'] ;
 	}
 	else{
-		echo $pageCategory['image'] ;
+		echo "categories/".$pageCategory['image'] ;
 	 }
 	 ?>);">
 		<div class="overlay"></div>

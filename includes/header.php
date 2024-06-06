@@ -8,7 +8,7 @@ $categories = $categoryObj->getAllCat();
     <meta name="description" content="<?php echo $description;?>">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
+    <link rel="shortcut icon" href="<?php echo SITE_PATH?>/images/prisma-logo.png" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
 
@@ -35,7 +35,9 @@ $categories = $categoryObj->getAllCat();
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	      <a class="navbar-brand" href="<?php echo SITE_PATH?>">Prisma Designs</a>
+	      <a class="navbar-brand" href="<?php echo SITE_PATH?>">
+          <img class="image-fluid" style="width: 226px;" src="<?php echo SITE_PATH?>/images/prisma-logo.png" alt="">
+        </a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>

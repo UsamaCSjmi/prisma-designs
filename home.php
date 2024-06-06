@@ -127,25 +127,56 @@ while($category = mysqli_fetch_array($categories)){
 <section class="ftco-section ftc-no-pb">
 	<div class="container">
 		<div class="row no-gutters">
-			<div class="col-md-5 p-md-5 img img-2" style="background-image: url(<?php echo SITE_PATH?>/images/about.jpg);">
+			<div class="col-md-5 p-md-5 img img-2" style="background-image: url(<?php echo SITE_PATH?>/images/about-us.png);">
 			</div>
 			<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
 				<div class="heading-section mb-5 pl-md-5 heading-section-with-line">
 					<div class="pl-md-5 ml-md-5">
-						<span class="subheading">About</span>
-						<h2 class="mb-4">We are the best interior &amp; Architect Consultant in Italy</h2>
+						<span class="subheading">About Us</span>
+						<h2 class="mb-4">Crafting Excellence: Tradition Meets Innovation, One Masterpiece at a Time.</h2>
 					</div>
 				</div>
 				<div class="pl-md-5 ml-md-5 mb-5">
-					<p>On her way she met a copy. The copy warned the Little Blind Text, that where it came from it would have been rewritten a thousand times and everything that was left from its origin would be the word "and" and the Little Blind Text should turn around and return to its own, safe country. But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-					<p>When she reached the first hills of the Italic Mountains, she had a last view back on the skyline of her hometown Bookmarksgrove, the headline of Alphabet Village and the subline of her own road, the Line Lane. Pityful a rethoric question ran over her cheek, then she continued her way.</p>
-					<p><a href="#" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
+					<p>Prisma Designs, established in 2017, is a premier export-oriented unit specializing in the creation of exquisite metal and wooden handicrafts. Our diverse product range encompasses home decor items, kitchenware, tableware, and indoor games, each crafted with meticulous attention to detail and superior craftsmanship. Our commitment to quality and innovation has positioned us as a preferred partner for discerning global customers.</p>
+					<p>At Prisma Designs, we understand the importance of combining traditional craftsmanship with contemporary design trends. Our dedicated team of skilled artisans and designers work collaboratively to produce unique pieces that not only enhance aesthetic appeal but also serve functional purposes. We take pride in our ability to cater to a wide array of tastes and preferences, ensuring that each product is a perfect blend of elegance and practicality.</p>
+					<p>Customer satisfaction is at the core of our operations. We prioritize timely delivery and uphold stringent quality standards to ensure our clients receive the finest products. Our unwavering dedication to excellence has garnered us a loyal customer base worldwide, who value our reliability and the exceptional quality we deliver.</p>
+					<p>Join us at Prisma Designs, where craftsmanship meets creativity, and transform your living spaces with our handcrafted masterpieces.</p>
+					<p><a href="<?php echo SITE_PATH.'/about'?>" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
 				</div>
 			</div>
 		</div>
 	</div>
 </section>
 
+
+<section class="ftco-section ftc-no-pb">
+	<div class="container">
+		<div class="row no-gutters">
+			<div class="col-md-5 p-md-5 img img-2 order-md-last" style="background-image: url(<?php echo SITE_PATH?>/images/img.jpg);">
+			</div>
+			<div class="col-md-7 wrap-about pb-md-5 ftco-animate">
+				<div class="heading-section mb-md-5 pl-md-5 heading-section-with-line">
+					<div class="pr-md-5 mr-md-5">
+						<span class="subheading">Why Choose Us?</span>
+						<h2 class="mb-4">Crafting excellence worldwide, with precision and satisfaction.</h2>
+					</div>
+				</div>
+				<div class="pr-md-5 mr-md-5">
+				<ul>
+					<li>Cutting-Edge Technology: With our in-house laser cutting and marking machines, coupled with a UV printer, we ensure precision and customization like no other, delivering products tailored to your exact specifications.</li>
+					<li>Global Reach: Trusted by clients in over 15 countries, our international presence speaks volumes about the quality and reliability of our products and services.</li>
+					<li>Extensive Experience: Having successfully completed 100+ projects, we possess the expertise and insights to handle diverse requirements with efficiency and excellence.</li>
+					<li>Customer Satisfaction: Our primary focus is buyer satisfaction, reflected in the testimonials of our satisfied clientele who have experienced the exceptional quality and service we provide.</li>
+					<li>Skilled Artisans: Behind every masterpiece lies the expertise of our skilled craftsmen, who meticulously craft each piece with passion and precision.</li>
+					<li>Design Excellence: Supported by CAD designers, we blend creativity with technical expertise to bring your ideas to life, ensuring stunning designs that captivate and inspire.</li>
+					<li>Comprehensive Manufacturing: With in-house manufacturing capabilities and strategic outsourcing, we offer flexibility and efficiency, ensuring timely delivery without compromising on quality.</li>
+				</ul>
+					<p><a href="#" class="btn-custom">Learn More <span class="ion-ios-arrow-forward"></span></a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(<?php echo SITE_PATH?>/images/bg_3.jpg);" data-stellar-background-ratio="0.5">
 	<div class="container">
