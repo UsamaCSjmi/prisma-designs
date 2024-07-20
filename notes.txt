@@ -1,4 +1,4 @@
-INSERT INTO `product` (`id`, `categories_id`, `sub_categories_id`, `name`, `slug`, `title`, `description`, `image`, `status`) VALUES (NULL, '24', '24', '', '', '', '', 'planter-1.jpg', '1');
+INSERT INTO `product` (`id`, `categories_id`, `sub_categories_id`, `name`, `slug`, `title`, `description`, `image`, `status`) VALUES (NULL, '24', '24', '', '', '', '', 'dough-bowls-1.jpg', '1');
 
 
 Re-upload Database
@@ -10,3 +10,6 @@ DROP TABLE categories;
 DROP TABLE contact_us;
 DROP TABLE team;
 DROP TABLE pages;
+
+
+Remove Dough Bowls -> Add Pestle and Mortar
